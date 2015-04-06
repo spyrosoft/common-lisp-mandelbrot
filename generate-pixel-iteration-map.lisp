@@ -8,7 +8,7 @@
 (defun generate-pixel-iteration-map-x ()
 	(let ((x0 0.0))
 		(declare (type double-float x0))
-		(dotimes (x-pixel (1- setting-canvas-width))
+		(dotimes (x-pixel setting-canvas-width)
 			(setq x0 (map-x-pixel-to-cartesian x-pixel))
 			(generate-pixel-iteration-map-y x0 x-pixel))))
 
@@ -19,7 +19,7 @@
 	(let ((y0 0.0) (iteration 0))
 		(declare (type double-float y0))
 		(declare (type fixnum iteration))
-		(dotimes (y-pixel (1- setting-canvas-height))
+		(dotimes (y-pixel setting-canvas-height)
 			(setq y0 (map-y-pixel-to-cartesian y-pixel))
 			(setq iteration (iterate x0 y0))
 			(setf (aref pixel-iteration-map x-pixel y-pixel) iteration)
