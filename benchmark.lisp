@@ -4,5 +4,4 @@
 
 (defun benchmark-stop (benchmark-message)
 	(setq benchmark-stop-time (get-universal-time))
-	(print (- benchmark-stop-time benchmark-start-time))
-	(print benchmark-message))
+	(format t "~%~S :: ~D Seconds~%" benchmark-message (- benchmark-stop-time benchmark-start-time)))
