@@ -1,14 +1,14 @@
 (ql:quickload :zpng)
+(ql:quickload :iterate)
 
 (defpackage :firefractal-mandelbrot-png
-	(:use :common-lisp :zpng)
+	(:use :common-lisp :zpng :iterate)
 	(:export :generate-png))
 
 (in-package :firefractal-mandelbrot-png)
 
-;(declaim (optimize speed))
-(declaim (optimize safety))
-(declaim (optimize debug))
+;(declaim (optimize (safety 0) (debug 0) (speed 3)))
+(declaim (optimize (safety 3) (debug 3) (speed 3)))
 
 (setq *read-default-float-format* 'double-float)
 
@@ -46,8 +46,8 @@
 	(initialize-settings)
 	(initialize-globals)
 	(generate-color-transition-map)
-	(generate-pixel-iteration-map)
-	(write-pixel-iteration-map-to-png)
+	;(generate-pixel-iteration-map)
+	;(write-pixel-iteration-map-to-png)
 	(benchmark-stop "End Generate PNG"))
 
 (generate-png)
