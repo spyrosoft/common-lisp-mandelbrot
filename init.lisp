@@ -25,6 +25,7 @@
 (defvar setting-colors)
 
 (defvar color-transition-map)
+(defvar color-transition-map-index)
 (defvar pixel-iteration-map)
 (defvar max-pixel-iteration)
 (defvar min-pixel-iteration)
@@ -46,8 +47,8 @@
 	(initialize-settings)
 	(initialize-globals)
 	(generate-color-transition-map)
-	;(generate-pixel-iteration-map)
-	;(write-pixel-iteration-map-to-png)
+	(generate-pixel-iteration-map)
+	(write-mandelbrot-to-png)
 	(benchmark-stop "End Generate PNG"))
 
 (generate-png)
