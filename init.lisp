@@ -7,8 +7,8 @@
 
 (in-package :firefractal-mandelbrot-png)
 
-;(declaim (optimize (safety 0) (debug 0) (speed 3)))
-(declaim (optimize (safety 3) (debug 3) (speed 3)))
+(declaim (optimize (safety 0) (debug 0) (speed 3)))
+;(declaim (optimize (safety 3) (debug 3) (speed 3)))
 
 (setq *read-default-float-format* 'double-float)
 
@@ -35,8 +35,6 @@
 (load "generate-color-transition-map.lisp")
 (load "generate-pixel-iteration-map.lisp")
 (load "png.lisp")
-
-(initialize-settings)
 
 (defun initialize-globals ()
 	(setq max-pixel-iteration 0)
