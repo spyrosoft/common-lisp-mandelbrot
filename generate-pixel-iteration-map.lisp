@@ -21,7 +21,7 @@
 		(declare (type fixnum iteration))
 		(dotimes (y-pixel setting-canvas-height)
 			(setq y0 (map-y-pixel-to-cartesian y-pixel))
-			(setq iteration (iterate x0 y0))
+			(setq iteration (iterate-z-squared-plus-c x0 y0))
 			(setf (aref pixel-iteration-map x-pixel y-pixel) iteration)
 			(if (> iteration max-pixel-iteration)
 					(setq max-pixel-iteration iteration))
@@ -31,7 +31,7 @@
 (defun map-y-pixel-to-cartesian (y-pixel)
 	(+ (* -1 (/ (- y-pixel (/ setting-canvas-height 2)) setting-zoom-level)) setting-y))
 
-(defun iterate (x0 y0)
+(defun iterate-z-squared-plus-c (x0 y0)
 	(let ((x 0.0) (y 0.0) (x-temporary 0.0))
 		(declare (type double-float x y x-temporary))
 		(do ((iteration 0 (1+ iteration)))
