@@ -28,8 +28,24 @@
 	(setq setting-zoom-level 466876366840)
 	(setq setting-x -0.7491457822750298)
 	(setq setting-y -0.052562994794231745)
+	;; Large Full Bleed
 	(setq setting-canvas-width 5475)
 	(setq setting-canvas-height 3675)
+	;; Large Trim Size
+	(setq setting-canvas-width 5400)
+	(setq setting-canvas-height 3600)
+	;; Medium Full Bleed
+	(setq setting-canvas-width 4288)
+	(setq setting-canvas-height 3238)
+	;; Medium Trim Size
+	(setq setting-canvas-width 4200)
+	(setq setting-canvas-height 3150)
+	;; Small Full Bleed
+	(setq setting-canvas-width 3062)
+	(setq setting-canvas-height 2012)
+	;; Small Trim Size
+	(setq setting-canvas-width 3028)
+	(setq setting-canvas-height 1969)
 	(setq setting-invert-colors nil)
 	(setq setting-max-iterations 1000)
 
