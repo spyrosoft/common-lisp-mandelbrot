@@ -1,10 +1,10 @@
 (defun initialize-settings ()
 	;; This is temporary - need to replace this with json
 	
-	(declare (integer setting-zoom-level))
+	(declare (type integer setting-zoom-level))
 	;Is double-float or long-float appropriate for x & y?
-	(declare (double-float setting-x setting-y))
-	(declare (fixnum setting-canvas-width setting-canvas-height setting-max-iterations))
+	(declare (type double-float setting-x setting-y))
+	(declare (type fixnum setting-canvas-width setting-canvas-height setting-max-iterations))
 	
 	;; Testing
 	;(setq setting-zoom-level 4)
@@ -32,20 +32,20 @@
 	(setq setting-canvas-width 5475)
 	(setq setting-canvas-height 3675)
 	;; Large Trim Size
-	(setq setting-canvas-width 5400)
-	(setq setting-canvas-height 3600)
+	;(setq setting-canvas-width 5400)
+	;(setq setting-canvas-height 3600)
 	;; Medium Full Bleed
 	(setq setting-canvas-width 4288)
 	(setq setting-canvas-height 3238)
 	;; Medium Trim Size
-	(setq setting-canvas-width 4200)
-	(setq setting-canvas-height 3150)
+	;(setq setting-canvas-width 4200)
+	;(setq setting-canvas-height 3150)
 	;; Small Full Bleed
 	(setq setting-canvas-width 3062)
 	(setq setting-canvas-height 2012)
 	;; Small Trim Size
-	(setq setting-canvas-width 3028)
-	(setq setting-canvas-height 1969)
+	;(setq setting-canvas-width 3028)
+	;(setq setting-canvas-height 1969)
 	(setq setting-invert-colors nil)
 	(setq setting-max-iterations 1000)
 
