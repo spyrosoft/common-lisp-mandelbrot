@@ -1,7 +1,6 @@
 (defun write-mandelbrot-to-png ()
 	(with-open-file (file "first.png" :direction :output :if-exists :supersede)
-		(let* ((current-pixel-iteration-map-index)
-					 (png (make-instance 'png
+		(let* ((png (make-instance 'png
 															 :color-type :truecolor
 															 :width setting-canvas-width
 															 :height setting-canvas-height))
