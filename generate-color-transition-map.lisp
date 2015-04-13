@@ -2,7 +2,7 @@
 	(setq *color-transition-map* '())
 	(dotimes (setting-colors-index (1- (length *setting-colors*)))
 		(generate-color-transition setting-colors-index))
-	(nreverse *color-transition-map*)
+	(setq *color-transition-map* (nreverse *color-transition-map*))
 	(setq *color-transition-map* (make-array (list
 																					(length *color-transition-map*)
 																					(length (first *color-transition-map*)))
