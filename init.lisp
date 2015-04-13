@@ -45,6 +45,5 @@
 	(print "Generate Pixel Iteration Map")
 	(time (generate-pixel-iteration-map))
 	(print "Write PNG File")
-	(time (write-mandelbrot-to-png)))
-
-(generate-png)
+	(time (write-mandelbrot-to-png))
+	)
