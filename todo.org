@@ -1,0 +1,7 @@
+* Optimization
+
+** Remove the necessity for garbage collection by reducing the number of lets
+
+** Use the CFFI to utilize C floating point numbers in lieu of ratios
+
+** Inline functions that can be inlined
